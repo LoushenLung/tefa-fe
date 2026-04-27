@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { signIn } from "next-auth/react";
 
 export default function SignInPage() {
   const [email, setEmail] = useState("");
@@ -11,6 +12,10 @@ export default function SignInPage() {
     e.preventDefault();
     // Handle sign-in logic here
     console.log("Signing in with:", { email, password });
+  };
+
+  const handleGoogleSignIn = () => {
+    signIn("google", { callbackUrl: "/" });
   };
 
   return (
@@ -103,7 +108,10 @@ export default function SignInPage() {
           </div>
 
           <div className="mt-6 grid grid-cols-2 gap-4">
-            <button className="flex items-center justify-center rounded-lg border border-white/10 bg-white/5 py-2.5 text-slate-300 transition-all hover:bg-white/10 hover:text-white">
+            <button 
+              onClick={handleGoogleSignIn}
+              className="flex items-center justify-center rounded-lg border border-white/10 bg-white/5 py-2.5 text-slate-300 transition-all hover:bg-white/10 hover:text-white"
+            >
               <svg className="mr-2 h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.908 3.152-1.928 4.176-1.288 1.288-3.312 2.696-7.84 2.696-7.032 0-12.76-5.704-12.76-12.728s5.728-12.728 12.76-12.728c3.84 0 6.536 1.504 8.512 3.384l2.36-2.36c-2.336-2.224-5.4-3.912-10.872-3.912-9.696 0-17.76 8.064-17.76 17.76s8.064 17.76 17.76 17.76c5.224 0 9.176-1.728 12.264-4.936 3.192-3.192 4.192-7.64 4.192-11.232 0-1.072-.08-2.096-.24-3.072h-16.216z"/>
               </svg>
