@@ -1,0 +1,2 @@
+{"timestamp":"00:00:14.710","source":"Server","level":"WARN","message":"⚠ Slow filesystem detected. The benchmark took 368ms. If D:\\Coding\\Project\\Tefa\\fe\\.next/dev is a network drive, consider moving it to a local folder.\nSee more: https://nextjs.org/docs/app/guides/local-development"}
+{"timestamp":"00:00:17.132","source":"Server","level":"LOG","message":""}
