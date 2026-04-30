@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 16, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/middleware.ts"],"sourcesContent":["export { default } from \"next-auth/middleware\";\n\nexport const config = {\n  // Specify the routes that should be protected\n  // Here we protect everything EXCEPT sign-in, sign-up, and public assets\n  matcher: [\n    /*\n     * Match all request paths except for the ones starting with:\n     * - api/auth (auth API routes)\n     * - sign-in (login page)\n     * - sign-up (registration page)\n     * - _next/static (static files)\n     * - _next/image (image optimization files)\n     * - favicon.ico (favicon file)\n     */\n    \"/((?!api/auth|sign-in|sign-up|_next/static|_next/image|favicon.ico).*)\",\n  ],\n};\n"],"names":["config","matcher"],"mappings":";;;;;;;;;;AAEO,MAAMA,SAAS;IACpB,8CAA8C;IAC9C,wEAAwE;IACxEC,SAAS;QACP;;;;;;;;KAQC,GACD;KACD;AACH"}}]
+}
