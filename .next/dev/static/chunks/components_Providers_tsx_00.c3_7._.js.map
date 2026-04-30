@@ -2,5 +2,5 @@
   "version": 3,
   "sources": [],
   "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///D:/Coding/Project/Tefa/frontend/components/Providers.tsx"],"sourcesContent":["\"use client\";\r\n\r\nimport { SessionProvider } from \"next-auth/react\";\r\nimport { ReactNode } from \"react\";\r\n\r\nexport default function Providers({ children }: { children: ReactNode }) {\r\n  return <SessionProvider>{children}</SessionProvider>;\r\n}\r\n"],"names":["Providers","children"],"mappings":";;;;;AAEA;AAFA;;;AAKe,SAASA,UAAU,EAAEC,QAAQ,EAA2B;IACrE,qBAAO,6LAAC,oKAAe;kBAAEA;;;;;;AAC3B;KAFwBD"}}]
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///D:/Coding/Project/Tefa/frontend/components/Providers.tsx"],"sourcesContent":["\"use client\";\r\n\r\nimport { ReactNode } from \"react\";\r\n\r\nexport default function Providers({ children }: { children: ReactNode }) {\r\n  return <>{children}</>;\r\n}\r\n\r\n"],"names":["Providers","children"],"mappings":";;;;;AAAA;;AAIe,SAASA,UAAU,EAAEC,QAAQ,EAA2B;IACrE,qBAAO;kBAAGA;;AACZ;KAFwBD"}}]
 }
